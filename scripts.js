@@ -43,7 +43,7 @@ function ready(){
 }
 //Eliminamos todos los elementos del carrito y lo ocultamos
 function pagarClicked(){
-    alert("Gracias por la compra");
+    alert("todavia no, pero vuelva pronto ;)");
     //Elimino todos los elmentos del carrito
     var carritoItems = document.getElementsByClassName('carrito-items')[0];
     while (carritoItems.hasChildNodes()){
@@ -202,3 +202,46 @@ function actualizarTotalCarrito(){
 
 
 
+/// CAMBIO FUENTE, color estilos de TITULO ////
+
+
+var tituloItem = document.querySelector(".titulo-item");
+
+
+tituloItem.style.fontFamily = 'Press Start 2P', cursive; 
+tituloItem.style.color = "#8A2BE2";
+
+
+
+/// CAMBIO FUENTE BUTTON ITEMS //
+
+// Seleccionar el elemento con la clase "boton-item"
+var botonItem = document.querySelector(".contenedor .contenedor-items .item .boton-item");
+
+// Cambiar la fuente del texto dentro del botón
+botonItem.style.fontFamily = 'Raleway', sans-serif;  
+
+
+
+/// CODIGO SEARCH ///
+
+// Obtener una referencia al formulario y al elemento "search-results"
+var searchForm = document.querySelector("form");
+var searchResults = document.getElementById("search-results");
+
+// Agregar un evento de escucha para el envío del formulario
+searchForm.addEventListener("submit", function(event) {
+    // Evitar que se realice la recarga de la página
+    event.preventDefault();
+
+    // Obtener el valor ingresado en el campo de búsqueda
+    var searchTerm = document.querySelector(".form-control").value;
+
+    // Realizar la lógica de búsqueda aquí
+    // En este ejemplo, simulamos resultados de búsqueda
+    var resultsHTML = "<h2>Resultados de la búsqueda:</h2>";
+    resultsHTML += "<p>Los resultados de la búsqueda para '" + searchTerm + "' se mostrarán aquí.</p>";
+
+    // Mostrar los resultados en el elemento "search-results"
+    searchResults.innerHTML = resultsHTML;
+});

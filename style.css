@@ -1,22 +1,46 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600&family=Titillium+Web:wght@200;300;400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;1,300&display=swap');
+
+
+
+
+
+
+
 *{
     margin: 0;
     padding:0;
     font-family: 'Open Sans';
 }
 header{
-    background: url(img/header.jpg);
-    background-size: cover;
+    background: url(./images/header.gif);
+    background-size: contain;
     background-position:center;
     height: 300px;
+    background-attachment: fixed;
 }
+iframe.gif-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+
 header h1{
-    text-align: center;
-    font-size: 35px;
-    /* background-color: #000; */
-    color: #fff;
-    padding: 30px 0;
-}
+          background-color: rgb(175, 66, 175);
+          font-family: 'Press Start 2P', cursive;
+          font-style: normal;
+          font-weight: 400;
+          text-align: center;
+          font-size: 35px;
+          padding: 30px 0;
+        }
+     
+
 .contenedor{
     max-width: 1200px;
     padding: 10px;
@@ -66,11 +90,12 @@ header h1{
 }
 
 .contenedor .contenedor-items .item .boton-item{
+    font-family: 'Raleway', sans-serif; ;
     display: block;
     margin: 10px auto;
     border: none;
-    background-color: black;
-    color: #fff;
+    background-color: #824dbf;
+    color: rgb(200, 139, 241);
     padding: 5px 15px;
     border-radius: 5px;
     cursor: pointer;
@@ -91,7 +116,7 @@ header h1{
     opacity: 0;
 }
 .carrito .header-carrito{
-    background-color: #000;
+    background-color: #5d0c83;
     color: #fff;
     text-align: center;
     padding: 30px 0;
@@ -146,7 +171,7 @@ header h1{
     position: absolute;
     right: 15px;
     top: 15px;
-    color: #000;
+    color: #6317aa;
     font-size: 20px;
     width: 40px;
     height: 40px;
@@ -179,7 +204,7 @@ header h1{
     display: block;
     width: 100%;
     border: none;
-    background: #000;
+    background: #6317aa;
     color: #fff;
     border-radius: 5px;
     font-size: 18px;
@@ -206,3 +231,49 @@ header h1{
         width: 100%;
     }
   }
+
+/*codigo banner imagen principal */
+
+.banner {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+  
+  /* Estilo para hacer que la imagen sea responsive */
+  .responsive-image {
+    width: 100%;
+    height: auto;
+  }
+
+.banner {
+    text-align: center;
+}
+
+
+
+/* FUENTE DE TITULO */
+
+.titulo-item {
+    font-family: 'Press Start 2P', cursive;
+    color: #6317aa;
+    text-shadow: 2px 2px 4px rgba(204, 123, 236, 0.5);
+}
+
+
+/*FUENTE NAV*/
+
+
+nav {
+    font-family: 'Press Start 2P', cursive; 
+    color: #b991e7; /* Cambiar el color del texto a rojo (#FF0000) */
+}
+
+
+nav .nav-link {
+    color: #b991e7;
+  
+}
