@@ -322,6 +322,6 @@ footer{
   }
 
   p i {
-    display: block; /* Hace que los elementos sean bloques */
-    margin-bottom: 10px; /* Añade un espacio entre cada elemento */
+    display: block; 
+    margin-bottom: 10px; 
 }
