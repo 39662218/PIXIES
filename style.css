@@ -93,7 +93,7 @@ header h1{
 }
 
 .contenedor .contenedor-items .item .boton-item{
-    font-family: 'Raleway', sans-serif; 
+    font-family: 'Roboto Mono', monospace; 
     display: block;
     margin: 10px auto;
     border: none;
@@ -284,6 +284,7 @@ nav {
 
 
 nav .nav-link {
+    font-family: 'Press Start 2P', cursive;
     color: #b991e7;
   
 }
@@ -292,14 +293,19 @@ nav .nav-link {
 /* footer */
 
 footer{
+
+    font-family: 'Press Start 2P', cursive;
+    color: #1a0338;
     display: flex;
     justify-content: center;
     align-items: center;
   
     position:   end;
-    background-color: rgb(111, 129, 115);
+    background-color: rgb(198, 62, 252);
   }
-   
+
+ 
+  
   
   .footercontacto{
   margin-top: 30%;
@@ -325,3 +331,23 @@ footer{
     display: block; 
     margin-bottom: 10px; 
 }
+
+/* medias q */
+@media (max-width: 768px) {
+    /* Aquí puedes definir estilos específicos para pantallas más pequeñas */
+}
+
+/* Estilos para pantallas medianas, como tablets */
+@media (max-width: 992px) {
+    /* Aquí puedes definir estilos específicos para tablets */
+}
+
+/* Estilos para pantallas grandes, como pantallas de escritorio */
+@media (min-width: 1200px) {
+    /* Aquí puedes definir estilos específicos para pantallas de escritorio */
+}
+
+
+
+
+
