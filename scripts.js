@@ -1,4 +1,4 @@
-//Variable que mantiene el estado visible del carrito
+//Variable q hace visible del carrito
 var carritoVisible = false;
 
 //Espermos que todos los elementos de la pàgina cargen para ejecutar el script
@@ -160,7 +160,7 @@ function eliminarItemCarrito(event){
     //Si no hay elimino el carrito
     ocultarCarrito();
 }
-//Funciòn que controla si hay elementos en el carrito. Si no hay oculto el carrito.
+//Funciòn que controla si hay elementos en el carrito. 
 function ocultarCarrito(){
     var carritoItems = document.getElementsByClassName('carrito-items')[0];
     if(carritoItems.childElementCount==0){
@@ -225,23 +225,20 @@ botonItem.style.fontFamily = 'Raleway', sans-serif;
 
 /// CODIGO SEARCH ///
 
-// Obtener una referencia al formulario y al elemento "search-results"
-var searchForm = document.querySelector("form");
-var searchResults = document.getElementById("search-results");
 
-// Agregar un evento de escucha para el envío del formulario
-searchForm.addEventListener("submit", function(event) {
-    // Evitar que se realice la recarga de la página
-    event.preventDefault();
 
-    // Obtener el valor ingresado en el campo de búsqueda
-    var searchTerm = document.querySelector(".form-control").value;
+const searchForm = document.getElementById('search-form');
+const searchInput = document.getElementById('search-input');
 
-    // Realizar la lógica de búsqueda aquí
-    // En este ejemplo, simulamos resultados de búsqueda
-    var resultsHTML = "<h2>Resultados de la búsqueda:</h2>";
-    resultsHTML += "<p>Los resultados de la búsqueda para '" + searchTerm + "' se mostrarán aquí.</p>";
 
-    // Mostrar los resultados en el elemento "search-results"
-    searchResults.innerHTML = resultsHTML;
+searchForm.addEventListener('submit', function (event) {
+    event.preventDefault(); 
+
+   
+    const searchTerm = searchInput.value.trim();
+
+    if (searchTerm !== '') {
+        window.location.href = `search-results.html?query=${encodeURIComponent(searchTerm)}`;
+    }
 });
+

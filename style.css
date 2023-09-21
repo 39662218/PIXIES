@@ -253,7 +253,7 @@ header h1{
     text-align: center;
   }
   
-  /* Estilo para hacer que la imagen sea responsive */
+  /*  imagen sea responsive */
   .responsive-image {
     width: 100%;
     height: auto;
@@ -279,11 +279,49 @@ header h1{
 
 nav {
     font-family: 'Press Start 2P', cursive; 
-    color: #b991e7; /* Cambiar el color del texto a rojo (#FF0000) */
+    color: #b991e7; 
 }
 
 
 nav .nav-link {
     color: #b991e7;
   
+}
+
+
+/* footer */
+
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    position:   end;
+    background-color: rgb(111, 129, 115);
+  }
+   
+  
+  .footercontacto{
+  margin-top: 30%;
+  }
+  
+  .logofacebook{
+  width: 70px;
+  padding: 5%;
+  
+  }
+  
+  .logowhatsapp{
+  width: 60px;
+  padding: 7%;
+  }
+  
+  .logoinstagram{
+  width: 60px;
+  padding: 7%;
+  }
+
+  p i {
+    display: block; /* Hace que los elementos sean bloques */
+    margin-bottom: 10px; /* Añade un espacio entre cada elemento */
 }
