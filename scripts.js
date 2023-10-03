@@ -242,3 +242,47 @@ searchForm.addEventListener('submit', function (event) {
     }
 });
 
+document.addEventListener("DOMContentLoaded", function() {
+    const searchForm = document.getElementById("search-form");
+    
+    searchForm.addEventListener("submit", function(event) {
+        event.preventDefault(); // Previene la recarga de la página
+        
+        const searchInput = document.getElementById("search-input");
+        const searchTerm = searchInput.value;
+        
+        // Realiza alguna acción con el término de búsqueda (por ejemplo, redireccionar a una página de resultados)
+        window.location.href = "search-results.html?query=" + encodeURIComponent(searchTerm);
+    });
+});
+
+
+
+const contenidoIndexado = [
+    { pagina: "gorras.html", contenido: "Este es el contenido de la página 1" },
+    { pagina: "remeras.html", contenido: "Este es el contenido de la página 2" },
+    { pagina: "totebags.html", contenido: "Este es el contenido de la página 2" },
+    // Agregar más elementos indexados aquí
+];
+
+// Función de búsqueda
+function buscarTermino(termino) {
+    const resultados = [];
+
+    for (const item of contenidoIndexado) {
+        if (item.contenido.includes(termino)) {
+            resultados.push(item);
+        }
+    }
+
+    return resultados;
+}
+
+// Ejemplo de uso
+const terminoBusqueda = "contenido";
+const resultados = buscarTermino(terminoBusqueda);
+
+// Mostrar los resultados en la página
+for (const resultado of resultados) {
+    console.log(`Encontrado en ${resultado.pagina}: ${resultado.contenido}`);
+}
